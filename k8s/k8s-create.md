@@ -791,7 +791,7 @@ EOF
 
    稍等 2-3 分钟，等待 flannel pod 成为 running 状态 （具体时间视镜像下载速度）
 
-    ``` yaml
+    ```  
     NAME                                   READY   STATUS    RESTARTS   AGE
     coredns-65c54cc984-cglz9               1/1     Running   0          2m7s
     coredns-65c54cc984-qwd5b               1/1     Running   0          2m7s
