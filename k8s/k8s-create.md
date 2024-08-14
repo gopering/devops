@@ -791,18 +791,17 @@ EOF
 
    稍等 2-3 分钟，等待 flannel pod 成为 running 状态 （具体时间视镜像下载速度）
 
-    ```  
-    NAME                                   READY   STATUS    RESTARTS   AGE
-    coredns-65c54cc984-cglz9               1/1     Running   0          2m7s
-    coredns-65c54cc984-qwd5b               1/1     Running   0          2m7s
-    etcd-k8s-master                        1/1     Running   0          2m22s
-    kube-apiserver-k8s-master              1/1     Running   0          2m16s
-    kube-controller-manager-k8s-master     1/1     Running   0          2m16s
-    kube-flannel-ds-26drg                  1/1     Running   0          100s
-    kube-proxy-zwdlm                       1/1     Running   0          2m7s
-    kube-scheduler-k8s-master              1/1     Running   0          2m22s
-
-    ```
+```  
+        NAME                                   READY   STATUS    RESTARTS   AGE
+        coredns-65c54cc984-cglz9               1/1     Running   0          2m7s
+        coredns-65c54cc984-qwd5b               1/1     Running   0          2m7s
+        etcd-k8s-master                        1/1     Running   0          2m22s
+        kube-apiserver-k8s-master              1/1     Running   0          2m16s
+        kube-controller-manager-k8s-master     1/1     Running   0          2m16s
+        kube-flannel-ds-26drg                  1/1     Running   0          100s
+        kube-proxy-zwdlm                       1/1     Running   0          2m7s
+        kube-scheduler-k8s-master              1/1     Running   0          2m22s
+   ```
 
 
     
