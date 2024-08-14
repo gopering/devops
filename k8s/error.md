@@ -1,5 +1,5 @@
 - 错误集锦并附带解决方案
-  ``` 
+``` 
   错误 1
   
   There are no enabled repos.
@@ -19,6 +19,8 @@
 
 
 
+
+```
 ```
    错误 2
    root@k8s-master:~# crictl  images ls 
