@@ -1,6 +1,6 @@
 - 错误集锦并附带解决方案
-``` 
-  错误 1
+- 错误 
+```  错误 1
   
   There are no enabled repos.
   Run "yum repolist all" to see the repos you have.
@@ -21,8 +21,9 @@
 
 
 ```
-```
-   错误 2
+- 错误
+``` 错误 2
+   
    root@k8s-master:~# crictl  images ls 
 WARN[0000] image connect using default endpoints: [unix:///var/run/dockershim.sock unix:///run/containerd/containerd.sock unix:///run/crio/crio.sock unix:///var/run/cri-dockerd.sock]. As the default settings are now deprecated, you should set the endpoint instead. 
 E0623 08:08:57.723814  239026 remote_image.go:119] "ListImages with filter from image service failed" err="rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial unix /var/run/dockershim.sock: connect: no such file or directory\"" filter="&ImageFilter{Image:&ImageSpec{Image:ls,Annotations:map[string]string{},},}"
@@ -49,3 +50,27 @@ registry.aliyuncs.com/google_containers/coredns                      v1.10.1    
 registry.aliyuncs.com/google_containers/etcd                         3.5.7-0             86b6af7dd652c       102MB
 registry.aliyuncs.com/google_containers/kube-apiserver               v1.27.1             6f6e73fa8162b       33.4MB
 registry.aliyuncs.com/google_containers/kube-controller-manager      v1.27.1             c6b5118178229       31MB
+```
+
+
+
+
+
+- 错误 
+``` 错误 3
+在k8s node节点上执行命令,出现如下错误：
+
+[root@k8s-slave ~]# kubectl get node
+error: You must be logged in to the server (Unauthorized)
+
+
+解决方法：
+
+把k8s-master节点的/etc/kubernetes/admin.conf文件拷贝到k8s-slave节点的  
+（解决方法1）
+/etc/kubernetes/   
+（解决方法2）
+/root/.kube/config目录下，并修改文件名为config。
+```
+
+
