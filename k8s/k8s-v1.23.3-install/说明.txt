@@ -1,0 +1,25 @@
+
+所有节点都要执行
+先执行 k8s-common-1.sh    执行命令 sh k8s-common-1.sh
+再执行 k8s-common-2.sh    执行命令 sudo ./k8s-common-2.sh
+
+master节点执行
+然后执行 k8s-master.sh    执行命令 sh k8s-master.sh
+再次执行 k8s-flannel.sh   执行命令 sh k8s-flannel.sh
+
+把flannel文件复制到所有节点的/opt/cni/bin 文件夹下，并给予执行权限
+chmod +x flannel
+
+然后把master的/etc/kubernetes/admin.conf 复制到node节点的/etc/kubernetes/目录下
+执行命令 scp /etc/kubernetes/admin.conf root@192.168.0.37:/etc/kubernetes/
+关于192.168.0.37这个ip换成你自己的node节点的ip
+
+
+把master的/etc/kubernetes/admin.conf 复制到node节点的/etc/kubernetes/目录下这个步骤完成后切换到node节点
+然后执行 k8s-node-config-init.sh  执行命令sudo ./k8s-node-config-init.sh
+
+以上所有的步骤是基于centos 7的系统版本  安装的k8s集群版本是v1.23.3
+
+
+
+
